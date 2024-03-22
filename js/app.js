@@ -45,14 +45,17 @@ const persone = [
 ]
 console.log(persone)
 const adulti = []
+const minorenni = []
 
 for (let i = 0; i < persone.length; i++) {
     const people = persone[i];
     console.log(people)
-    const adults = people.eta
-    console.log(adults)
 
-    if (adults >= 18) {
-
+    if (people.eta >= 18) {
+        adulti.push( people.nome + ' ' + people.cognome + ' può guidare in quanto maggiore di 18 anni.')
+    } else {
+        minorenni.push(people.nome + ' ' + people.cognome + ' non può guidare in quanto minore di 18 anni')
     }
 }
+console.log(adulti)
+console.log(minorenni)
