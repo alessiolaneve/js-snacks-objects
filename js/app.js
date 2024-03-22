@@ -59,3 +59,34 @@ for (let i = 0; i < persone.length; i++) {
 }
 console.log(adulti)
 console.log(minorenni)
+
+// JSNACK 2 (BONUS)
+// A partire da un array di stringhe, crea un secondo array formattando le
+// stringhe del primo array in minuscolo e con l’iniziale maiuscola.
+// Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘Paperino’]
+
+const nomi = ['pippo', 'PLUTO', 'Paperino']
+const iniziale = []
+const restoParola = []
+const nomiOrdinati = []
+console.log(nomi)
+console.log(iniziale)
+console.log(restoParola)
+console.log(nomiOrdinati)
+
+
+for (let i = 0; i < nomi.length; i++) {
+    const names = nomi[i];
+    const namesMinusc = names.toLowerCase()
+    console.log(namesMinusc)
+
+    for (let i = 0; i < namesMinusc.length; i++) {
+        const lettere = namesMinusc[i];
+        console.log(lettere)
+        if (lettere[i] === 0) {
+            const inizialeMaiusc = lettere.toUpperCase()
+            console.log(inizialeMaiusc)
+            iniziale.push(inizialeMaiusc)
+        }
+    }
+}
