@@ -10,14 +10,21 @@ const animali = [
     { nome: 'ragno', famiglia: 'aracnidi', classe: 'artropodi' },
     { nome: 'criceto', famiglia: 'cricetidi', classe: 'roditori' },
 ]
-console.log(animali)
-
 const animaliMam = []
+console.log(animali, animaliMam)
 // - recuperare classe
 // - verificare classe = mammiferi
 // - pushare obj in nuovo array 
 
-for (let i = 0; i < animali.lenght; i++) {
-    const mamClass = animali[i]
-    console.log(mamClass)
-}
+for (let i = 0; i < animali.length; i++) {
+    const animals = animali[i];
+    console.log(animals)
+    const animalsClass = animals.classe
+    console.log(animalsClass)
+    const mammiferi = animaliMam
+    console.log(mammiferi)
+
+    if (animalsClass === "mammiferi") {
+        mammiferi.push(animals)
+    }
+} 
