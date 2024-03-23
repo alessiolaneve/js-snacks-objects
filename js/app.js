@@ -52,7 +52,7 @@ for (let i = 0; i < persone.length; i++) {
     console.log(people)
 
     if (people.eta >= 18) {
-        adulti.push( people.nome + ' ' + people.cognome + ' può guidare in quanto maggiore di 18 anni.')
+        adulti.push(people.nome + ' ' + people.cognome + ' può guidare in quanto maggiore di 18 anni.')
     } else {
         minorenni.push(people.nome + ' ' + people.cognome + ' non può guidare in quanto minore di 18 anni')
     }
@@ -66,27 +66,10 @@ console.log(minorenni)
 // Es: [‘pippo’, ‘PLUTO’, ‘Paperino’] => [‘Pippo’, ‘Pluto’, ‘Paperino’]
 
 const nomi = ['pippo', 'PLUTO', 'Paperino']
-const iniziale = []
-const restoParola = []
-const nomiOrdinati = []
-console.log(nomi)
-console.log(iniziale)
-console.log(restoParola)
-console.log(nomiOrdinati)
-
+const nomiMaiusc = []
 
 for (let i = 0; i < nomi.length; i++) {
-    const names = nomi[i];
-    const namesMinusc = names.toLowerCase()
-    console.log(namesMinusc)
-
-    for (let i = 0; i < namesMinusc.length; i++) {
-        const lettere = namesMinusc[i];
-        console.log(lettere)
-        if (lettere[i] === 0) {
-            const inizialeMaiusc = lettere.toUpperCase()
-            console.log(inizialeMaiusc)
-            iniziale.push(inizialeMaiusc)
-        }
-    }
+     const name = nomi[i].toLowerCase();
+     nomiMaiusc.push(name.charAt(0).toUpperCase() + name.slice(1));
 }
+console.log(nomiMaiusc);
